@@ -17,8 +17,8 @@ exclude = ["benches/*", "tests/*"]
 name = "miniz_oxide"
 
 [dependencies]
-adler2 = { version = "2.0", default-features = false }
-simd-adler32 = { version = "0.3.3", default-features = false, optional = true }
+adler2 = { git = "ssh://git@github.com/kharmic-universe-deps/adler2-rs.git", branch = "ku-0.1.0", default-features = false }
+simd-adler32 = { git="ssh://git@github.com/kharmic-universe-deps/simd-adler32-rs.git", branch = "ku-0.1.0", default-features = false, optional = true }
 serde = { version = "1.0", features = ["derive"], optional = true }
 
 # Internal feature, only used when building as part of libstd, not part of the
@@ -31,7 +31,7 @@ compiler_builtins = { version = '0.1.2', optional = true }
 [dev-dependencies]
 ## Messes with minimum rust version and drags in deps just for running tests
 ## so just comment out for now and enable manually when needed for enabling benches
-# criterion = "0.5"
+criterion = "0.6"
 
 [[bench]]
 name = "benchmark"

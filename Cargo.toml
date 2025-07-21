@@ -23,13 +23,13 @@ name = "miniz_oxide_c_api"
 #CRATE_TYPE
 
 [dependencies]
-cc = "1.0.83"
-libc = "0.2.22"
-crc32fast = "1.2.0"
-miniz_oxide = { path = "miniz_oxide", version = "0.8.0" }
+cc = { git = "ssh://git@github.com/kharmic-universe-deps/cc-rs.git", branch = "ku-0.1.0" }
+libc = { git = "ssh://git@github.com/kharmic-universe-deps/libc-rs.git", branch = "ku-0.1.0" }
+crc32fast = {git = "ssh://git@github.com/kharmic-universe-deps/crc32fast-rs.git", branch = "ku-0.1.0"}
+miniz_oxide = { path = "miniz_oxide" }
 
 [build-dependencies]
-cc = "1.0"
+cc = { git = "ssh://git@github.com/kharmic-universe-deps/cc-rs.git", branch = "ku-0.1.0" }
 
 [features]
 default = []
